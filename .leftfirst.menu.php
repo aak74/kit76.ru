@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Компания", 
+		"about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Орский экспресс", 
+		"express/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Филиалы", 
+		"filials/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вакансии", 
+		"about/vacancies.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

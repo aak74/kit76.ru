@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Транспортная компания Кит</title>
+<body>
+<div class="header">
+</div>
+<div class="content">
+<?
+require_once($_SERVER["DOCUMENT_ROOT"] . "/classes/phpQuery.php");
+
+function pr_var($avar, $atitle='') {
+	echo '<b>'.$atitle.'</b><pre>';
+	print_r($avar);
+	echo '</pre>';
+}  
+
+$addr = '						<div><b>Адрес:</b> ул. Металлистов, 3&nbsp;&nbsp;&nbsp;<span class="xdf"><b>E-mail:</b> orsk@tk-kit.ru </span><b>Режим работы:</b> Понедельник - Пятница с 9.00 до 18.00					</div>';
+// preg_match_all("/(\<(/?[^\>]+)\<)/", $addr, $matches, PREG_SET_ORDER);
+preg_match_all(
+	// "|<[^>]+>(.*)</[^>]+>|U",
+	"|/b\>([^\>]+)\<|", 
+	// "/(/b\>)([^\>]+)(\<)/", 
+	// "(/b>)([^>]+)(<)", 
+	'						<div><b>Адрес:</b> ул. Металлистов, 3&nbsp;&nbsp;&nbsp;<span class="xdf"><b>E-mail:</b> orsk@tk-kit.ru </span><b>Режим работы:</b> Понедельник - Пятница с 9.00 до 18.00					</div>', 
+	$matches, 
+	PREG_SET_ORDER
+);
+// preg_match_all("/(\</b\>)([^\<]+)(\<)/", $addr, $matches, PREG_SET_ORDER);
+pr_var($matches, "matches");
+echo count($matches);
+
+$addr2 = phpQuery::newDocumentHTML($addr);
+
+$addr1 = $addr2->find("div");
+pr_var($addr1->html(), "Адрес");
+
+foreach ($matches as $key => $value){
+	echo "$key => ", "$value", "<br>";
+}
+
+
+
+
+
+
+
+
+
+
+
+pq($addr1)->find("b:gt(0)")->prepend("<br>");
+pr_var($addr1->html(), "Адрес");
+
+pq($addr1)->find("b")->remove();
+// pq($addr1)->find("b")->remove()->end()->find("span")->remove();
+pr_var($addr1->html(), "Адрес");
+
+
+$realAddress = pq($addr)->siblings("b");
+$realSchedule = pq($addr)->find("*:eq(0)")->text();
+// pr_var($addr, "html");
+pr_var(pq($addr)->text(), "text");
+// pr_var($realAddress, "realAddress");
+pr_var($realAddress->html(), "realAddress->html()");
+pr_var($realSchedule, "realSchedule");
+
+foreach ($addr2->siblings() as $key => $value){
+	echo "$key => ", "$value", "<br>";
+}
+
+
+?>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/*a:link {color:#00437d;}*/
+
+.header {
+	background: url(images/head.png) center;
+	min-height: 60px;
+
+	/*margin: auto;*/
+}
+
+.header img {
+	/*margin-left: 50%;*/
+}
+
+/*.bottom,*/
+.top {
+	background: url(images/bg1.png) repeat-x;
+}
+
+.bottom {
+	margin-top: 20px;
+	min-height: 120px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+
+.title {
+	/*background-color: #00f;*/
+	background: url(images/title.png) center 20px no-repeat;
+	min-height: 200px;
+	padding-top: 120px;
+	text-align: center;
+}
+
+.description {
+	margin-top: 20px;
+	font-size: 140%;
+	min-height: 120px;
+	/*text-align: center;*/
+}
+
+.features {
+	min-height: 220px;
+	margin-bottom: 3em;
+}
+
+.features img {
+	margin-bottom: 0.5em;
+}
+
+.features div {
+	font-weight: 800;
+	text-align: center;
+	color: #fff !important;
+	/*color: #fde900;*/
+	/*color: #00437d;*/
+}
+
+.features div:not(:first-of-type) {
+	min-height: 240px;
+	padding-top: 50px;
+
+}
+
+.feature-left {
+	background: url(images/left_w.png) left no-repeat;
+}
+
+.feature-right {
+	background: url(images/right_w.png) right no-repeat;
+}
+
+.features-title {
+	position: relative;
+	font-size: 2.5em;
+	/*top: 1em;*/
+	color: #fff !important;
+	z-index: 10;
+}
+
+.presentation {
+	/*background-color: #00f;*/
+	background: url(images/bg2­.png) repeat-x;
+	min-height: 564px;
+	margin: 30px 0;
+}
+
+.presentation .text {
+	padding: 40px 20px 10px 0px;
+	color: #fff;
+	font-size: 160%;
+}
+
+.btn-warning {
+	background-image: linear-gradient(to bottom, #fde900 0%, #e8bb06 100%);
+  background-repeat: repeat-x;
+  border-color: #d6ac06;
+  font-weight: 800;
+}
+
+
+.price-express thead tr > th {
+    background-color: #d9edf7;
+}
+
+#counters {
+	display: none;
+}

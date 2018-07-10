@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Филиальная<br/>сеть", 
+		"f/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+		Array(
+		"Наложенный<br>платеж", 
+		"ekit/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+		Array(
+		"Особая<br>география", 
+		"region/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Посчитать<br/>стоимость", 
+		"http://dvagruza.ru", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
